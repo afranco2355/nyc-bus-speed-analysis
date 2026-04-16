@@ -32,7 +32,7 @@ primary driver of bus slowness across the network.
 **Camera enforcement improved speeds but did not reverse the long term decline.**
 The MTA began automated bus lane camera enforcement in 2019, and Hayden AI 
 deployed its ABLE camera systems on MTA buses starting in 2022. Analysis of 
-the B44 route in Brooklyn — one of the first enforcement corridors — shows 
+the B44 route in Brooklyn, one of the first enforcement corridors, shows 
 speeds tracking the citywide decline despite enforcement, suggesting broader 
 congestion trends offset the gains from camera enforcement at the route level.
 
@@ -40,7 +40,7 @@ congestion trends offset the gains from camera enforcement at the route level.
 routes show a surprisingly narrow speed difference between rush hour and 
 off-peak periods. This suggests that for the slowest corridors, the bottleneck 
 is not primarily congestion but rather structural factors like stop density, 
-signal timing, and street geometry — pointing to the need for interventions 
+signal timing, and street geometry pointing to the need for interventions 
 beyond bus lane enforcement alone.
 
 ## Data Sources
