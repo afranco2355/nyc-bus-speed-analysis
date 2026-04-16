@@ -1,65 +1,60 @@
 # NYC Bus Speed Analysis
 
-Interactive analysis of MTA bus speeds across New York City using 
-10 years of open data (2015–present).
+Interactive analysis of MTA bus speeds across New York City using 10 years 
+of open data (2015–present).
 
 ## Project Overview
-This project explores how fast buses actually move across New York City 
-by analyzing over 158,000 records of MTA bus speed data. The analysis 
-identifies the slowest and fastest routes, compares performance across 
-boroughs, examines how speeds changed over time including during COVID-19, 
-and visualizes the entire bus network on an interactive map colored by speed.
+This project explores how fast buses actually move across New York City by 
+analyzing over 158,000 records of MTA bus speed data. The analysis identifies 
+the slowest and fastest routes, compares performance across boroughs, examines 
+how speeds changed over time, and visualizes the entire bus network on an 
+interactive map colored by speed.
 
 ## Key Findings
-- Manhattan has the slowest buses in the city, averaging under 5 mph
-- Staten Island has the fastest buses, running on wider roads with less congestion
-- M14A and M42 are the two slowest regular routes in the system
-- Buses on the slowest Manhattan routes travel barely faster than walking pace
-- Bus speeds increased noticeably during 2020 COVID lockdowns as traffic disappeared, 
-  then declined again as the city reopened
-- The B44 route in Brooklyn tracked the citywide speed decline despite camera 
-  enforcement deployment in 2019 and Hayden AI ABLE camera installation in 2022, 
-  suggesting broader congestion trends offset enforcement gains at the route level
-- The 10 slowest peak-hour routes show minimal speed difference between peak and 
-  off-peak periods, suggesting structural factors rather than congestion are the 
-  primary cause of slowness on these corridors
 
-## What the Project Does
-- Loads 158,000 rows of real MTA bus speed data directly from NY Open Data
-- Filters out shuttle replacement buses to focus on regular service
-- Calculates average speed per route and per borough
-- Analyzes speed trends across 10 years with COVID-19 and Hayden AI deployment markers
-- Examines the B44 route specifically against the citywide average
-- Compares peak vs off-peak speeds for the slowest routes
-- Joins speed data with official MTA route geometries
-- Builds an interactive map of all 348 routes colored red to green by speed
-- Hovering over any route shows its name, description and average speed
+**The slowest buses in NYC barely move faster than walking pace.** The M14A 
+and M42 are the two slowest regular routes in the system, averaging under 
+4.8 mph. Most of the 10 slowest routes are Manhattan crosstown routes, where 
+dense traffic, frequent stops, and short block lengths combine to create 
+chronic slowness regardless of time of day.
 
-## Key Insight for Transit Policy
-The narrow gap between peak and off-peak speeds on the slowest routes suggests 
-that for these corridors, bus lane enforcement alone may not dramatically improve 
-speeds — structural factors like stop density, signal timing, and street geometry 
-play an equal or greater role. This points to the need for complementary 
-interventions alongside enforcement.
+**Manhattan is the slowest borough, Staten Island the fastest.** Manhattan 
+buses average under 5 mph while Staten Island buses move significantly faster, 
+benefiting from wider roads, fewer stops, and lower traffic density. The 
+difference reflects how street geometry shapes bus performance as much as 
+traffic volume does.
+
+**COVID-19 revealed how much traffic slows buses.** Bus speeds increased 
+noticeably in 2020 as lockdowns emptied city streets, then declined again as 
+the city reopened and congestion returned. This confirms that traffic is a 
+primary driver of bus slowness across the network.
+
+**Camera enforcement improved speeds but did not reverse the long term decline.**
+The MTA began automated bus lane camera enforcement in 2019, and Hayden AI 
+deployed its ABLE camera systems on MTA buses starting in 2022. Analysis of 
+the B44 route in Brooklyn — one of the first enforcement corridors — shows 
+speeds tracking the citywide decline despite enforcement, suggesting broader 
+congestion trends offset the gains from camera enforcement at the route level.
+
+**Structural factors matter as much as congestion.** The 10 slowest peak-hour 
+routes show a surprisingly narrow speed difference between rush hour and 
+off-peak periods. This suggests that for the slowest corridors, the bottleneck 
+is not primarily congestion but rather structural factors like stop density, 
+signal timing, and street geometry — pointing to the need for interventions 
+beyond bus lane enforcement alone.
 
 ## Data Sources
-- MTA Bus Speeds (2015–present): data.ny.gov/Transportation/MTA-Bus-Speeds-Beginning-2015/cudb-vcni
-- MTA Bus Route geometries: data.ny.gov/Transportation/MTA-Bus-Routes/bzwk-3hb4
+MTA Bus Speeds (2015–present) and MTA Bus Route geometries are both published 
+on data.ny.gov as part of the MTA Open Data Program.
 
 ## Tools Used
-- Python
-- pandas — data cleaning and analysis
-- geopandas — geographic data handling
-- folium — interactive map
-- plotly — interactive charts
-- branca — map color scale
-- Google Colab — development environment
+Python, pandas, geopandas, folium, plotly, and Google Colab.
 
 ## How to Run
-1. Open the notebook in Google Colab
-2. Run all cells from top to bottom
-3. Data loads automatically from public URLs — no files needed
+Open the notebook in Google Colab and run all cells from top to bottom. 
+All data loads automatically from public URLs — no files need to be downloaded.
 
 ## Files
-- `nyc_bus_speed_analysis.ipynb` — full analysis notebook
-- `nyc_bus_speeds_map.html` — interactive route map, download and open in browser
+`nyc_bus_speed_analysis.ipynb` contains the full analysis notebook.
+`nyc_bus_speeds_map.html` is the interactive route map — download and open 
+in any browser to explore all 348 routes colored by average speed.
